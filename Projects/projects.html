@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ian Hall | Projects</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-image: url("background.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #222;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            background-color: rgba(19, 19, 19, 0.95);
+
+            padding: 15px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        nav a {
+            background: white;
+            color: black;
+
+            padding: 10px 20px;
+
+            border-radius: 20px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #292a2b;
+            color: white;
+
+            transform: scale(1.08);
+        }
+
+        .projects-page {
+            padding: 120px 20px 60px;
+        }
+
+        .projects-box {
+            max-width: 1000px;
+            margin: auto;
+
+            background: rgba(255, 255, 255, 0.92);
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+
+            margin-top: 0;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+
+            font-size: 18px;
+        }
+
+        .project-list {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h2 {
+            margin-top: 0;
+        }
+
+        .project-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            background: #292a2b;
+            color: white;
+
+            padding: 10px 18px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #555;
+
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #131313;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">Home</a>
+
+        <a href="index.html#about">About Me</a>
+
+        <a href="projects.html">Projects</a>
+
+        <a href="index.html#gallery">Photo Gallery</a>
+
+        <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+    <div class="projects-page">
+
+        <div class="projects-box">
+
+            <h1>My Projects</h1>
+
+            <p class="intro">
+                A collection of engineering, CAD, manufacturing,
+                and design projects I have worked on.
+            </p>
+
+
+            <div class="project-list">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card">
+
+                    <h2>Mini Pool Table</h2>
+
+                    <p>
+                        Designed and manufactured a miniature pool table
+                        using SolidWorks and 3D printing.
+                    </p>
+
+                    <a class="button" href="pool-table.html">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <h2>CNC Air Piston</h2>
+
+                    <p>
+                        Designed and manufactured an air-powered piston
+                        using CAD, CAM, CNC machining, and G-code.
+                    </p>
+
+                    <a class="button" href="air-piston.html">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <h2>Formula SAE</h2>
+
+                    <p>
+                        Engineering work involving vehicle ergonomics,
+                        steering placement, pedal tray design, and fabrication.
+                    </p>
+
+                    <a class="button" href="formula-sae.html">
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <!-- ADD MORE PROJECTS BELOW -->
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        © 2026 Ian Hall | Mechanical Engineering Portfolio
+
+    </footer>
+
+</body>
+
+</html>
