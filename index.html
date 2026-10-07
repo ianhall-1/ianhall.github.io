@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ian Hall | Mechanical Engineering Portfolio</title>
+
 
     <style>
 
@@ -14,26 +16,39 @@
             scroll-behavior: smooth;
         }
 
+
+        /* =========================================
+           GENERAL PAGE
+           ========================================= */
+
         body {
             margin: 0;
+
             font-family: Arial, Helvetica, sans-serif;
 
             background-image: url("background.jpeg");
+
             background-size: cover;
+
             background-position: center;
+
             background-attachment: fixed;
 
             color: #222;
         }
 
 
-        /* =========================
-           NAVIGATION
-           ========================= */
+        /* =========================================
+           DESKTOP NAVIGATION
+           ========================================= */
 
         nav {
             display: flex;
+
             justify-content: center;
+
+            align-items: center;
+
             gap: 20px;
 
             background-color: rgba(19, 19, 19, 0.95);
@@ -41,7 +56,9 @@
             padding: 15px;
 
             position: fixed;
+
             top: 0;
+
             left: 0;
 
             width: 100%;
@@ -50,6 +67,18 @@
 
             box-sizing: border-box;
         }
+
+
+        .nav-links {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
 
         nav a {
             background: white;
@@ -67,17 +96,26 @@
             transition: 0.3s;
         }
 
+
         nav a:hover {
             background: #292a2b;
+
             color: white;
 
             transform: scale(1.08);
         }
 
 
-        /* =========================
+        /* Hide hamburger on desktop */
+
+        .mobile-menu-button {
+            display: none;
+        }
+
+
+        /* =========================================
            GENERAL SECTIONS
-           ========================= */
+           ========================================= */
 
         section {
             padding: 100px 20px 60px;
@@ -86,13 +124,14 @@
         }
 
 
-        /* =========================
+        /* =========================================
            HOME
-           ========================= */
+           ========================================= */
 
         #home {
             padding-left: 0;
         }
+
 
         .home-layout {
             display: flex;
@@ -104,6 +143,7 @@
             min-height: 500px;
         }
 
+
         .home-layout img {
             width: 300px;
 
@@ -113,6 +153,7 @@
 
             box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
         }
+
 
         .home-text {
             background: rgba(255, 255, 255, 0.92);
@@ -126,11 +167,13 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
         }
 
+
         .home-text h1 {
             font-size: 42px;
 
             margin-bottom: 10px;
         }
+
 
         .home-text p {
             font-size: 18px;
@@ -139,9 +182,9 @@
         }
 
 
-        /* =========================
+        /* =========================================
            SECTION BOXES
-           ========================= */
+           ========================================= */
 
         .section-box {
             background: rgba(255, 255, 255, 0.9);
@@ -159,11 +202,13 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
         }
 
+
         h1,
         h2,
         h3 {
             color: #292a2b;
         }
+
 
         h2 {
             font-size: 34px;
@@ -171,14 +216,15 @@
             margin-top: 0;
         }
 
+
         p {
             line-height: 1.6;
         }
 
 
-        /* =========================
+        /* =========================================
            BUTTONS
-           ========================= */
+           ========================================= */
 
         .button {
             display: inline-block;
@@ -200,6 +246,7 @@
             transition: 0.3s;
         }
 
+
         .button:hover {
             background-color: #555;
 
@@ -207,9 +254,9 @@
         }
 
 
-        /* =========================
+        /* =========================================
            PROJECTS
-           ========================= */
+           ========================================= */
 
         .project-grid {
             display: grid;
@@ -221,6 +268,7 @@
 
             margin-top: 30px;
         }
+
 
         .project-card {
             background: white;
@@ -235,18 +283,20 @@
             transition: 0.3s;
         }
 
+
         .project-card:hover {
             transform: translateY(-5px);
         }
+
 
         .project-card h3 {
             margin-top: 0;
         }
 
 
-        /* =========================
+        /* =========================================
            GALLERY
-           ========================= */
+           ========================================= */
 
         .gallery-container {
             display: grid;
@@ -258,6 +308,7 @@
 
             margin-top: 30px;
         }
+
 
         .gallery-container img {
             width: 100%;
@@ -274,23 +325,24 @@
                 0 3px 10px rgba(0, 0, 0, 0.2);
         }
 
+
         .gallery-container img:hover {
             transform: scale(1.04);
         }
 
 
-        /* =========================
+        /* =========================================
            CONTACT
-           ========================= */
+           ========================================= */
 
         .contact-links {
             margin-top: 20px;
         }
 
 
-        /* =========================
+        /* =========================================
            FOOTER
-           ========================= */
+           ========================================= */
 
         footer {
             background: #131313;
@@ -303,181 +355,558 @@
         }
 
 
-        /* =================================================
+        /* =========================================================
+           =========================================================
            MOBILE VERSION
-           ================================================= */
+           =========================================================
+           ========================================================= */
 
         @media (max-width: 800px) {
 
+
+            /* =====================================
+               MOBILE PAGE / BACKGROUND
+               ===================================== */
+
             body {
+
                 background-attachment: scroll;
+
+                /*
+                 * Instead of "cover", this lets more of the
+                 * actual background image remain visible.
+                 */
+
+                background-size: 100% auto;
+
+                background-position: center top;
+
+                background-repeat: repeat-y;
+
+                overflow-x: hidden;
             }
 
 
-            /* MOBILE NAVIGATION */
+            /* =====================================
+               FIXED MOBILE NAVIGATION
+               ===================================== */
 
             nav {
-                position: relative;
+
+                position: fixed;
+
+                top: 0;
+
+                left: 0;
+
+                width: 100%;
+
+                height: 60px;
 
                 display: flex;
 
-                flex-wrap: wrap;
+                align-items: center;
+
+                justify-content: flex-start;
+
+                padding: 9px 12px;
+
+                box-sizing: border-box;
+
+                background: rgba(19, 19, 19, 0.96);
+
+                backdrop-filter: blur(10px);
+
+                z-index: 9999;
+
+                box-shadow:
+                    0 3px 12px rgba(0, 0, 0, 0.3);
+            }
+
+
+            /* =====================================
+               HAMBURGER BUTTON
+               ===================================== */
+
+            .mobile-menu-button {
+
+                display: flex;
+
+                align-items: center;
 
                 justify-content: center;
 
-                gap: 6px;
+                width: 42px;
 
-                padding: 10px 6px;
+                height: 42px;
 
-                width: 100%;
+                padding: 0;
+
+                border: none;
+
+                border-radius: 10px;
+
+                background: white;
+
+                color: #222;
+
+                font-size: 25px;
+
+                line-height: 1;
+
+                cursor: pointer;
+
+                box-shadow:
+                    0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+
+
+            /* =====================================
+               MOBILE DROPDOWN MENU
+               ===================================== */
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                top: 60px;
+
+                left: 10px;
+
+                right: 10px;
+
+                padding: 10px;
+
+                flex-direction: column;
+
+                gap: 7px;
+
+                background: rgba(19, 19, 19, 0.98);
+
+                border-radius:
+                    0 0 16px 16px;
+
+                box-shadow:
+                    0 8px 22px rgba(0, 0, 0, 0.35);
 
                 box-sizing: border-box;
             }
 
-            nav a {
-                padding: 7px 11px;
 
-                font-size: 12px;
+            .nav-links.show {
 
-                border-radius: 16px;
+                display: flex;
             }
 
 
-            /* MOBILE HOME */
+            .nav-links a {
+
+                display: flex;
+
+                align-items: center;
+
+                justify-content: center;
+
+                width: 100%;
+
+                min-height: 44px;
+
+                padding: 9px;
+
+                box-sizing: border-box;
+
+                background: white;
+
+                color: #222;
+
+                border-radius: 12px;
+
+                font-size: 14px;
+
+                text-align: center;
+
+                text-decoration: none;
+
+                font-weight: bold;
+            }
+
+
+            .nav-links a:hover {
+
+                transform: none;
+
+                background: #eeeeee;
+
+                color: #222;
+            }
+
+
+            /* =====================================
+               MOBILE HOME
+               ===================================== */
 
             #home {
-                padding: 25px 15px 35px;
+
+                padding:
+
+                    85px
+
+                    15px
+
+                    45px;
             }
 
+
             .home-layout {
+
                 display: flex;
 
                 flex-direction: column;
 
                 align-items: center;
 
+                justify-content: center;
+
                 min-height: auto;
+
+                gap: 22px;
             }
 
 
-            /* MOBILE PROFILE PHOTO */
+            /* =====================================
+               MOBILE INTRO PHOTO
+               ===================================== */
 
             .home-layout img {
-                width: 170px;
 
-                max-width: 65%;
-
-                height: auto;
-
-                border-radius: 15px;
-
-                margin-bottom: 20px;
-
-                box-shadow:
-                    0 4px 12px rgba(0, 0, 0, 0.3);
-            }
-
-
-            /* MOBILE HOME TEXT */
-
-            .home-text {
                 width: 100%;
 
-                max-width: 500px;
+                max-width: 340px;
 
-                box-sizing: border-box;
+                height: 390px;
 
-                padding: 20px 18px;
+                object-fit: cover;
+
+                border-radius: 18px;
 
                 margin: 0;
 
-                border-radius: 12px;
-            }
-
-            .home-text h1 {
-                font-size: 27px;
-
-                text-align: center;
-
-                margin-bottom: 15px;
-            }
-
-            .home-text p {
-                font-size: 15px;
-
-                line-height: 1.5;
+                box-shadow:
+                    0 7px 22px rgba(0, 0, 0, 0.35);
             }
 
 
-            /* MOBILE SECTIONS */
+            /* =====================================
+               MOBILE INTRO CARD
+               ===================================== */
 
-            section {
-                padding: 35px 15px;
-            }
+            .home-text {
 
-            .section-box {
                 width: 100%;
 
                 max-width: 500px;
 
                 box-sizing: border-box;
 
-                padding: 22px 18px;
+                margin: 0;
 
-                border-radius: 12px;
-            }
+                padding: 28px 22px;
 
-            h2 {
-                font-size: 25px;
-            }
+                border-radius: 18px;
 
-            p {
-                font-size: 15px;
-            }
+                background:
+                    rgba(255, 255, 255, 0.96);
 
+                text-align: left;
 
-            /* MOBILE BUTTONS */
-
-            .button {
-                padding: 10px 16px;
-
-                margin: 6px;
-
-                font-size: 14px;
-
-                box-sizing: border-box;
+                box-shadow:
+                    0 6px 20px rgba(0, 0, 0, 0.22);
             }
 
 
-            /* MOBILE PROJECTS */
+            .home-text h1 {
 
-            .project-grid {
-                grid-template-columns: 1fr;
+                font-size: 30px;
 
-                gap: 15px;
+                line-height: 1.15;
+
+                margin-top: 0;
+
+                margin-bottom: 16px;
+
+                text-align: left;
             }
 
-            .project-card {
-                padding: 18px;
+
+            .home-text p {
+
+                font-size: 16px;
+
+                line-height: 1.6;
+
+                margin-bottom: 16px;
             }
 
 
-            /* MOBILE GALLERY */
+            /* =====================================
+               MOBILE HOME BUTTONS
+               ===================================== */
 
-            .gallery-container {
-                grid-template-columns: 1fr;
+            .home-text .button {
 
-                gap: 15px;
-            }
+                display: block;
 
-            .gallery-container img {
                 width: 100%;
 
-                height: auto;
+                box-sizing: border-box;
 
-                max-height: 450px;
+                margin:
+
+                    9px
+
+                    0;
+
+                padding: 13px;
+
+                text-align: center;
+
+                border-radius: 9px;
+            }
+
+
+            /* =====================================
+               MOBILE GENERAL SECTIONS
+               ===================================== */
+
+            section {
+
+                padding:
+
+                    40px
+
+                    15px;
+            }
+
+
+            .section-box {
+
+                width: 100%;
+
+                max-width: 500px;
+
+                box-sizing: border-box;
+
+                padding:
+
+                    28px
+
+                    20px;
+
+                margin: auto;
+
+                border-radius: 18px;
+
+                background:
+                    rgba(255, 255, 255, 0.96);
+
+                box-shadow:
+                    0 5px 18px rgba(0, 0, 0, 0.18);
+            }
+
+
+            h2 {
+
+                font-size: 27px;
+
+                margin-top: 0;
+
+                margin-bottom: 18px;
+            }
+
+
+            p {
+
+                font-size: 15px;
+
+                line-height: 1.6;
+            }
+
+
+            /* =====================================
+               MOBILE ABOUT
+               ===================================== */
+
+            #about .button {
+
+                display: block;
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+                margin:
+
+                    18px
+
+                    0
+
+                    0;
+
+                padding: 13px;
+
+                text-align: center;
+            }
+
+
+            /* =====================================
+               MOBILE PROJECTS
+               ===================================== */
+
+            .project-grid {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 16px;
+
+                margin-top: 20px;
+            }
+
+
+            .project-card {
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+                padding: 21px;
+
+                border-radius: 14px;
+
+                text-align: left;
+            }
+
+
+            .project-card h3 {
+
+                font-size: 21px;
+
+                margin-bottom: 10px;
+            }
+
+
+            .project-card p {
+
+                font-size: 14px;
+            }
+
+
+            .project-card .button {
+
+                display: block;
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+                margin:
+
+                    14px
+
+                    0
+
+                    0;
+
+                padding: 12px;
+
+                text-align: center;
+            }
+
+
+            /* =====================================
+               MOBILE PHOTO GALLERY
+               ===================================== */
+
+            .gallery-container {
+
+                display: grid;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 10px;
+
+                margin-top: 20px;
+            }
+
+
+            .gallery-container img {
+
+                width: 100%;
+
+                height: 150px;
 
                 object-fit: cover;
+
+                border-radius: 10px;
+
+                box-shadow:
+                    0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+
+
+            .gallery-container img:hover {
+
+                transform: none;
+            }
+
+
+            /* =====================================
+               MOBILE CONTACT
+               ===================================== */
+
+            .contact-links {
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 8px;
+
+                margin-top: 20px;
+            }
+
+
+            .contact-links .button {
+
+                width: 100%;
+
+                box-sizing: border-box;
+
+                margin: 0;
+
+                padding: 13px;
+
+                text-align: center;
+            }
+
+
+            /* =====================================
+               MOBILE FOOTER
+               ===================================== */
+
+            footer {
+
+                padding:
+
+                    22px
+
+                    15px;
+
+                font-size: 13px;
             }
 
         }
@@ -490,45 +919,84 @@
 <body>
 
 
-    <!-- =========================
+    <!-- =========================================
          NAVIGATION
-         ========================= -->
+         ========================================= -->
 
     <nav>
 
-        <a href="#home">Home</a>
 
-        <a href="#about">About Me</a>
+        <!-- MOBILE MENU BUTTON -->
 
-        <a href="Projects/projects.html">Projects</a>
+        <button
+            class="mobile-menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
 
-        <a href="gallery.html">Photo Gallery</a>
 
-        <a href="recommendations/recommendations.html">
-            Recommendations
-        </a>
+        <!-- NAVIGATION LINKS -->
 
-        <a href="#contact">Contact</a>
+        <div class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About Me
+            </a>
+
+            <a href="Projects/projects.html">
+                Projects
+            </a>
+
+            <a href="gallery.html">
+                Photo Gallery
+            </a>
+
+            <a href="recommendations/recommendations.html">
+                Recommendations
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
 
     </nav>
 
 
-    <!-- =========================
+    <!-- =========================================
          HOME
-         ========================= -->
+         ========================================= -->
 
     <section id="home">
 
+
         <div class="home-layout">
+
+
+            <!-- PROFILE PHOTO -->
 
             <img
                 src="personal.jpeg"
                 alt="Ian Hall"
             >
 
+
+            <!-- INTRODUCTION -->
+
             <div class="home-text">
 
-                <h1>Hello, I'm Ian Hall</h1>
+
+                <h1>
+                    Hello, I'm Ian Hall
+                </h1>
+
 
                 <p>
                     I am a Mechanical Engineering student at Mississippi State University
@@ -536,10 +1004,12 @@
                     and space applications.
                 </p>
 
+
                 <p>
                     This website serves as my personal engineering portfolio, where I
                     showcase projects, design work, technical experience, and photography.
                 </p>
+
 
                 <p>
                     Feel free to explore my projects, view my resume, browse my photography,
@@ -563,6 +1033,7 @@
                     View Resume
                 </a>
 
+
             </div>
 
         </div>
@@ -570,15 +1041,20 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================
          ABOUT
-         ========================= -->
+         ========================================= -->
 
     <section id="about">
 
+
         <div class="section-box">
 
-            <h2>About Me</h2>
+
+            <h2>
+                About Me
+            </h2>
+
 
             <p>
                 I'm Ian Hall, a Mechanical Engineering student at Mississippi State
@@ -586,15 +1062,18 @@
                 and space applications.
             </p>
 
+
             <p>
                 I enjoy turning ideas into practical designs through 3D modeling,
                 prototyping, manufacturing, and hands-on engineering work.
             </p>
 
+
             <p>
                 My experience includes SolidWorks, CNC machining, 3D printing,
                 engineering design, and Formula SAE.
             </p>
+
 
             <p>
                 Outside of engineering, I also enjoy photography and working on
@@ -610,24 +1089,30 @@
                 View My Resume
             </a>
 
+
         </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================
          PROJECTS
-         ========================= -->
+         ========================================= -->
 
     <section id="projects">
 
+
         <div class="section-box">
 
-            <h2>Engineering Projects</h2>
+
+            <h2>
+                Engineering Projects
+            </h2>
+
 
             <p>
-                A selection of engineering, manufacturing, and design projects
-                I have worked on.
+                A selection of engineering, manufacturing, and design projects I have
+                worked on.
             </p>
 
 
@@ -638,17 +1123,23 @@
 
                 <div class="project-card">
 
-                    <h3>Mini Pool Table</h3>
+
+                    <h3>
+                        Mini Pool Table
+                    </h3>
+
 
                     <p>
                         Designed and manufactured a functional miniature pool table
                         using SolidWorks and 3D printing.
                     </p>
 
+
                     <p>
                         The project included scaled components, a spring-loaded cue,
                         and printed structural parts.
                     </p>
+
 
                     <a
                         class="button"
@@ -657,6 +1148,7 @@
                         View Project
                     </a>
 
+
                 </div>
 
 
@@ -664,17 +1156,23 @@
 
                 <div class="project-card">
 
-                    <h3>CNC Air Piston</h3>
+
+                    <h3>
+                        CNC Air Piston
+                    </h3>
+
 
                     <p>
                         Designed an air-powered piston using SolidWorks and manufactured
                         components using CNC machining.
                     </p>
 
+
                     <p>
                         The project involved CAD modeling, CAM setup, G-code,
                         machining, and final assembly.
                     </p>
+
 
                     <a
                         class="button"
@@ -683,6 +1181,7 @@
                         View Project
                     </a>
 
+
                 </div>
 
 
@@ -690,17 +1189,23 @@
 
                 <div class="project-card">
 
-                    <h3>Formula SAE</h3>
+
+                    <h3>
+                        Formula SAE
+                    </h3>
+
 
                     <p>
                         Worked with Mississippi State's Formula SAE team on vehicle
                         design and manufacturing.
                     </p>
 
+
                     <p>
                         Work included driver ergonomics, pedal tray design,
                         steering component placement, and fabrication.
                     </p>
+
 
                     <a
                         class="button"
@@ -708,6 +1213,7 @@
                     >
                         View Project
                     </a>
+
 
                 </div>
 
@@ -719,15 +1225,20 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================
          PHOTO GALLERY
-         ========================= -->
+         ========================================= -->
 
     <section id="gallery">
 
+
         <div class="section-box">
 
-            <h2>Photo Gallery</h2>
+
+            <h2>
+                Photo Gallery
+            </h2>
+
 
             <p>
                 Heres some of my favorite photos I have taken.
@@ -805,15 +1316,20 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================
          CONTACT
-         ========================= -->
+         ========================================= -->
 
     <section id="contact">
 
+
         <div class="section-box">
 
-            <h2>Contact Me</h2>
+
+            <h2>
+                Contact Me
+            </h2>
+
 
             <p>
                 Feel free to contact me regarding engineering opportunities,
@@ -864,9 +1380,9 @@
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================
          FOOTER
-         ========================= -->
+         ========================================= -->
 
     <footer>
 
@@ -875,6 +1391,45 @@
         </p>
 
     </footer>
+
+
+    <!-- =========================================
+         MOBILE MENU JAVASCRIPT
+         ========================================= -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu =
+                document.querySelector(".nav-links");
+
+            menu.classList.toggle("show");
+
+        }
+
+
+        /*
+         * Close the mobile menu automatically
+         * after clicking a page section.
+         */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    document
+                        .querySelector(".nav-links")
+                        .classList
+                        .remove("show");
+
+                });
+
+            });
+
+    </script>
 
 
 </body>
