@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ian Hall | Mechanical Engineering Portfolio</title>
 
     <style>
+
         html {
             scroll-behavior: smooth;
         }
@@ -24,7 +27,9 @@
             color: #222;
         }
 
+
         /* NAVIGATION */
+
         nav {
             display: flex;
             justify-content: center;
@@ -64,18 +69,20 @@
         nav a:hover {
             background: #292a2b;
             color: white;
-
             transform: scale(1.08);
         }
 
+
         /* GENERAL SECTION SETTINGS */
+
         section {
             padding: 100px 20px 60px;
-
             scroll-margin-top: 80px;
         }
 
+
         /* HOME */
+
         #home {
             padding-left: 0;
         }
@@ -119,7 +126,9 @@
             line-height: 1.7;
         }
 
+
         /* SECTION BOXES */
+
         .section-box {
             background: rgba(255, 255, 255, 0.9);
 
@@ -151,7 +160,9 @@
             line-height: 1.6;
         }
 
+
         /* BUTTONS */
+
         .button {
             display: inline-block;
 
@@ -178,7 +189,9 @@
             transform: scale(1.05);
         }
 
+
         /* PROJECTS */
+
         .project-grid {
             display: grid;
 
@@ -209,7 +222,9 @@
             margin-top: 0;
         }
 
+
         /* GALLERY */
+
         .gallery-container {
             display: grid;
 
@@ -222,6 +237,7 @@
 
         .gallery-container img {
             width: 100%;
+
             height: 200px;
 
             object-fit: cover;
@@ -237,12 +253,16 @@
             transform: scale(1.04);
         }
 
+
         /* CONTACT */
+
         .contact-links {
             margin-top: 20px;
         }
 
+
         /* FOOTER */
+
         footer {
             background: #131313;
 
@@ -253,26 +273,65 @@
             padding: 25px;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE VERSION
+           ========================= */
+
         @media (max-width: 800px) {
 
+            body {
+                background-attachment: scroll;
+            }
+
+
+            /* MOBILE NAVIGATION */
+
             nav {
+                position: relative;
+
+                display: flex;
+
                 flex-wrap: wrap;
+
+                justify-content: center;
+
                 gap: 8px;
+
+                padding: 12px 8px;
+
+                width: 100%;
+
+                box-sizing: border-box;
             }
 
             nav a {
-                padding: 8px 12px;
+                padding: 9px 13px;
+
                 font-size: 14px;
+
+                border-radius: 20px;
+            }
+
+
+            /* MOBILE HOME */
+
+            #home {
+                padding: 20px 12px 40px;
             }
 
             .home-layout {
+                display: flex;
+
                 flex-direction: column;
-                padding: 20px;
+
+                align-items: center;
             }
 
             .home-layout img {
                 width: 250px;
+
+                max-width: 80%;
 
                 border-radius: 15px;
 
@@ -280,38 +339,111 @@
             }
 
             .home-text {
+                width: 100%;
+
+                box-sizing: border-box;
+
                 margin: 0;
+
+                padding: 25px 20px;
+
+                max-width: 100%;
+
+                border-radius: 12px;
             }
 
             .home-text h1 {
                 font-size: 32px;
             }
+
+            .home-text p {
+                font-size: 16px;
+
+                line-height: 1.6;
+            }
+
+
+            /* MOBILE SECTIONS */
+
+            section {
+                padding: 30px 12px 40px;
+            }
+
+            .section-box {
+                width: 100%;
+
+                box-sizing: border-box;
+
+                padding: 25px 18px;
+
+                max-width: 100%;
+            }
+
+
+            /* MOBILE PROJECTS */
+
+            .project-grid {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+
+
+            /* MOBILE GALLERY */
+
+            .gallery-container {
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+            }
+
+            .gallery-container img {
+                height: auto;
+
+                max-height: 400px;
+            }
+
+
+            /* MOBILE BUTTONS */
+
+            .button {
+                max-width: 100%;
+
+                box-sizing: border-box;
+            }
+
         }
+
     </style>
+
 </head>
 
 
 <body>
 
+
     <!-- NAVIGATION -->
 
-  <!-- NAVIGATION -->
+    <nav>
 
-<nav>
+        <a href="#home">Home</a>
 
-    <a href="#home">Home</a>
+        <a href="#about">About Me</a>
 
-    <a href="#about">About Me</a>
+        <a href="Projects/projects.html">Projects</a>
 
-    <a href="Projects/projects.html">Projects</a>
+        <a href="gallery.html">Photo Gallery</a>
 
-    <a href="gallery.html">Photo Gallery</a>
+        <a href="recommendations/recommendations.html">Recommendations</a>
 
-    <a href="recommendations/recommendations.html">Recommendations</a>
+        <a href="#contact">Contact</a>
 
-    <a href="#contact">Contact</a>
+    </nav>
 
-</nav>
 
     <!-- HOME -->
 
@@ -345,7 +477,9 @@
                     View My Projects
                 </a>
 
-                <a class="button" href="Ian's Resume Fall 2026.pdf" target="_blank">
+                <a class="button"
+                   href="Ian's Resume Fall 2026.pdf"
+                   target="_blank">
                     View Resume
                 </a>
 
@@ -385,7 +519,9 @@
                 projects that combine technical problem-solving with creativity.
             </p>
 
-            <a class="button" href="Ian's Resume Fall 2026.pdf" target="_blank">
+            <a class="button"
+               href="Ian's Resume Fall 2026.pdf"
+               target="_blank">
                 View My Resume
             </a>
 
@@ -409,6 +545,9 @@
 
             <div class="project-grid">
 
+
+                <!-- MINI POOL TABLE -->
+
                 <div class="project-card">
 
                     <h3>Mini Pool Table</h3>
@@ -423,12 +562,15 @@
                         and printed structural parts.
                     </p>
 
-                    <a class="button" href="projects/pool-table.html">
+                    <a class="button"
+                       href="Projects/pool-table.html">
                         View Project
                     </a>
 
                 </div>
 
+
+                <!-- CNC AIR PISTON -->
 
                 <div class="project-card">
 
@@ -444,12 +586,15 @@
                         machining, and final assembly.
                     </p>
 
-                    <a class="button" href="projects/piston.html">
+                    <a class="button"
+                       href="Projects/piston.html">
                         View Project
                     </a>
 
                 </div>
 
+
+                <!-- FORMULA SAE -->
 
                 <div class="project-card">
 
@@ -465,11 +610,13 @@
                         steering component placement, and fabrication.
                     </p>
 
-                    <a class="button" href="projects/formula-sae.html">
+                    <a class="button"
+                       href="Projects/formula-sae.html">
                         View Project
                     </a>
 
                 </div>
+
 
             </div>
 
@@ -494,25 +641,32 @@
 
             <div class="gallery-container">
 
-                <a href="Photos\fav2.jpg" target="_blank">
+
+                <!-- PHOTO 2 -->
+
+                <a href="Photos/fav2.jpg" target="_blank">
 
                     <img
-                        src="Photos\fav2.jpg"
+                        src="Photos/fav2.jpg"
                         alt="Photography by Ian Hall">
 
                 </a>
 
 
-                <a href="Photos\fav3.jpg" target="_blank">
+                <!-- PHOTO 3 -->
+
+                <a href="Photos/fav3.jpg" target="_blank">
 
                     <img
-                        src="Photos\fav3.jpg"
+                        src="Photos/fav3.jpg"
                         alt="Photography by Ian Hall">
 
                 </a>
 
 
-                <a href="Photos\fav4.jpg" target="_blank">
+                <!-- PHOTO 4 -->
+
+                <a href="Photos/fav4.jpg" target="_blank">
 
                     <img
                         src="Photos/fav4.jpg"
@@ -520,6 +674,8 @@
 
                 </a>
 
+
+                <!-- PHOTO 5 -->
 
                 <a href="Photos/fav5.jpg" target="_blank">
 
@@ -529,6 +685,7 @@
 
                 </a>
 
+
             </div>
 
         </div>
@@ -536,44 +693,55 @@
     </section>
 
 
-   <!-- CONTACT -->
+    <!-- CONTACT -->
 
-<section id="contact">
+    <section id="contact">
 
-    <div class="section-box">
+        <div class="section-box">
 
-        <h2>Contact Me</h2>
+            <h2>Contact Me</h2>
 
-        <p>
-            Feel free to contact me regarding engineering opportunities,
-            projects, internships, research, or other professional interests.
-        </p>
+            <p>
+                Feel free to contact me regarding engineering opportunities,
+                projects, internships, research, or other professional interests.
+            </p>
 
-        <div class="contact-links">
 
-            <a class="button"
-               href="https://mail.google.com/mail/?view=cm&fs=1&to=ianhallinfo@gmail.com"
-               target="_blank">
-                Email Me
-            </a>
+            <div class="contact-links">
 
-            <a class="button"
-               href="https://www.linkedin.com/in/ianh12/"
-               target="_blank">
-                LinkedIn
-            </a>
 
-            <a class="button"
-               href="https://github.com/ianhall-1"
-               target="_blank">
-                GitHub
-            </a>
+                <!-- EMAIL -->
+
+                <a class="button"
+                   href="https://mail.google.com/mail/?view=cm&fs=1&to=ianhallinfo@gmail.com"
+                   target="_blank">
+                    Email Me
+                </a>
+
+
+                <!-- LINKEDIN -->
+
+                <a class="button"
+                   href="https://www.linkedin.com/in/ianh12/"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+
+                <!-- GITHUB -->
+
+                <a class="button"
+                   href="https://github.com/ianhall-1"
+                   target="_blank">
+                    GitHub
+                </a>
+
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
     <!-- FOOTER -->
@@ -585,6 +753,7 @@
         </p>
 
     </footer>
+
 
 </body>
 
